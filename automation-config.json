@@ -1,0 +1,17 @@
+{
+  "PersonalInfo": {
+    "FirstName": "John",
+    "LastName": "Doe",
+    "DateOfBirth": "1990-05-15"
+  },
+  "ContactInfo": {
+    "Email": "john@example.com",
+    "Phone": "1234567890",
+    "Address": "123 Main St"
+  },
+  "ProfessionalInfo": {
+    "Occupation": "Software Engineer",
+    "Company": "Tech Co",
+    "YearsOfExperience": 5
+  }
+}

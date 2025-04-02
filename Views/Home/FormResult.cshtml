@@ -6,6 +6,11 @@
     var jsonString = JsonSerializer.Serialize(Model, new JsonSerializerOptions { WriteIndented = true });
 }
 
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">@TempData["Message"]</div>
+}
+
 <h1>Form Completed 🎉</h1>
 
 <div class="card my-3">
@@ -39,6 +44,10 @@
     <pre class="bg-light p-3 rounded">@jsonString</pre>
     <button id="downloadJson" class="btn btn-success mt-2">Download JSON</button>
 </div>
+
+<form asp-action="AutomateForm" method="post" class="mt-4">
+    <button type="submit" class="btn btn-warning">Run Selenium Automation</button>
+</form>
 
 @section Scripts {
     <script>

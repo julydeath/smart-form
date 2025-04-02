@@ -1,5 +1,9 @@
 /Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/appsettings.Development.json
 /Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/appsettings.json
+/Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/automation-config.json
+/Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/selenium-manager/linux/selenium-manager
+/Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/selenium-manager/macos/selenium-manager
+/Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/selenium-manager/windows/selenium-manager.exe
 /Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/smart-form.staticwebassets.endpoints.json
 /Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/smart-form
 /Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/smart-form.deps.json
@@ -320,6 +324,7 @@
 /Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/Microsoft.OpenApi.dll
 /Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/Newtonsoft.Json.dll
 /Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/Newtonsoft.Json.Bson.dll
+/Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/WebDriver.dll
 /Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll
 /Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll
 /Users/manojkumar/Developer/github/smart-form/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll
@@ -355,6 +360,7 @@
 /Users/manojkumar/Developer/github/smart-form/obj/Debug/net9.0/smart-form.MvcApplicationPartsAssemblyInfo.cache
 /Users/manojkumar/Developer/github/smart-form/obj/Debug/net9.0/smart-form.RazorAssemblyInfo.cache
 /Users/manojkumar/Developer/github/smart-form/obj/Debug/net9.0/smart-form.RazorAssemblyInfo.cs
+/Users/manojkumar/Developer/github/smart-form/obj/Debug/net9.0/smart-form.sourcelink.json
 /Users/manojkumar/Developer/github/smart-form/obj/Debug/net9.0/scopedcss/bundle/smart-form.styles.css
 /Users/manojkumar/Developer/github/smart-form/obj/Debug/net9.0/staticwebassets.build.json
 /Users/manojkumar/Developer/github/smart-form/obj/Debug/net9.0/staticwebassets.development.json

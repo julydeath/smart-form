@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TzCF4kSVf7w=",
+  "dgSpecHash": "CwZ+g3xu3RA=",
   "success": true,
   "projectFilePath": "/Users/manojkumar/Developer/github/smart-form/smart-form.csproj",
   "expectedPackageFiles": [
@@ -59,6 +59,8 @@
     "/Users/manojkumar/.nuget/packages/microsoft.win32.registry/4.5.0/microsoft.win32.registry.4.5.0.nupkg.sha512",
     "/Users/manojkumar/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/manojkumar/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "/Users/manojkumar/.nuget/packages/selenium.webdriver/4.30.0/selenium.webdriver.4.30.0.nupkg.sha512",
+    "/Users/manojkumar/.nuget/packages/selenium.webdriver.chromedriver/135.0.7049.4200/selenium.webdriver.chromedriver.135.0.7049.4200.nupkg.sha512",
     "/Users/manojkumar/.nuget/packages/system.buffers/4.6.0/system.buffers.4.6.0.nupkg.sha512",
     "/Users/manojkumar/.nuget/packages/system.collections.immutable/5.0.0/system.collections.immutable.5.0.0.nupkg.sha512",
     "/Users/manojkumar/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",

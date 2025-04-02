@@ -16,19 +16,19 @@
 <form asp-action="Step3" method="post">
     <div class="form-group mb-3">
         <label asp-for="Occupation" class="form-label">Occupation</label>
-        <input asp-for="Occupation" class="form-control" id="occupation" required />
+        <input asp-for="Occupation" class="form-control" required />
         <span asp-validation-for="Occupation" class="text-danger"></span>
     </div>
 
     <div class="form-group mb-3">
         <label asp-for="Company" class="form-label">Company</label>
-        <input asp-for="Company" class="form-control" id="company" required />
+        <input asp-for="Company" class="form-control" required />
         <span asp-validation-for="Company" class="text-danger"></span>
     </div>
 
     <div class="form-group mb-3">
         <label asp-for="YearsOfExperience" class="form-label">Years of Experience</label>
-        <input asp-for="YearsOfExperience" type="number" class="form-control" id="yearsOfExperience" required min="0" />
+        <input asp-for="YearsOfExperience" type="number" class="form-control" required min="0" />
         <span asp-validation-for="YearsOfExperience" class="text-danger"></span>
     </div>
 

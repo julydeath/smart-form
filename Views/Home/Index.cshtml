@@ -1,5 +1,13 @@
 @{
     ViewData["Title"] = "Multi-Step Form";
 }
+
 <h1>Welcome to the Form Wizard</h1>
-<a href="/Home/Step1" class="btn btn-primary">Start Form</a>
+
+<div class="d-flex gap-3 mt-4">
+    <a asp-action="Step1" class="btn btn-primary">Start Form</a>
+
+    <form asp-action="RunAutomationFromConfig" method="post">
+        <button type="submit" class="btn btn-secondary">Run Config Automation</button>
+    </form>
+</div>

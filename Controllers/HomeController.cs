@@ -152,6 +152,42 @@ namespace MultiStepFormApp.Web.Controllers
             return Json(formData);
         }
 
+        //Selenium automation
+        public IActionResult AutomateForm()
+        {
+            var formData = new FormData
+            {
+                PersonalInfo = JsonSerializer.Deserialize<PersonalInfo>(HttpContext.Session.GetString("PersonalInfo")),
+                ContactInfo = JsonSerializer.Deserialize<ContactInfo>(HttpContext.Session.GetString("ContactInfo")),
+                ProfessionalInfo = JsonSerializer.Deserialize<ProfessionalInfo>(HttpContext.Session.GetString("ProfessionalInfo"))
+            };
+
+            var automation = new Services.FormAutomationService("https://localhost:7283");
+            automation.SubmitForm(formData);
+
+            TempData["Message"] = "Form automated via Selenium. Screenshot saved!";
+            return RedirectToAction("FormResult");
+        }
+
+
+        [HttpPost]
+        public IActionResult RunAutomationFromConfig()
+        {
+            Console.WriteLine(">>> RunAutomationFromConfig triggered");
+
+
+            var formData = Services.FormAutomationService.LoadConfigFromFile("automation-config.json");
+
+            HttpContext.Session.SetString("PersonalInfo", JsonSerializer.Serialize(formData.PersonalInfo));
+            HttpContext.Session.SetString("ContactInfo", JsonSerializer.Serialize(formData.ContactInfo));
+            HttpContext.Session.SetString("ProfessionalInfo", JsonSerializer.Serialize(formData.ProfessionalInfo));
+
+            var automation = new Services.FormAutomationService("https://localhost:7283");
+            automation.SubmitForm(formData);
+            TempData["Message"] = "Automation run using config file!";
+            return RedirectToAction("FormResult");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
