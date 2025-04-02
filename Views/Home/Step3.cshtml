@@ -1,0 +1,41 @@
+@model MultiStepFormApp.Web.Models.ProfessionalInfo
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+@{
+    ViewData["Title"] = "Step 3 - Professional Information";
+}
+
+<h1>Step 3: Professional Information</h1>
+
+<div class="progress mb-4">
+    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+        aria-valuemax="100">Step 3 of 3</div>
+</div>
+
+<form asp-action="Step3" method="post">
+    <div class="form-group mb-3">
+        <label asp-for="Occupation" class="form-label">Occupation</label>
+        <input asp-for="Occupation" class="form-control" id="occupation" required />
+        <span asp-validation-for="Occupation" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Company" class="form-label">Company</label>
+        <input asp-for="Company" class="form-control" id="company" required />
+        <span asp-validation-for="Company" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="YearsOfExperience" class="form-label">Years of Experience</label>
+        <input asp-for="YearsOfExperience" type="number" class="form-control" id="yearsOfExperience" required min="0" />
+        <span asp-validation-for="YearsOfExperience" class="text-danger"></span>
+    </div>
+
+    <a asp-action="Step2" class="btn btn-secondary">Previous Step</a>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

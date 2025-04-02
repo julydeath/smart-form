@@ -1,0 +1,55 @@
+@model MultiStepFormApp.Web.Models.FormData
+@using System.Text.Json
+
+@{
+    ViewData["Title"] = "Result";
+    var jsonString = JsonSerializer.Serialize(Model, new JsonSerializerOptions { WriteIndented = true });
+}
+
+<h1>Form Completed 🎉</h1>
+
+<div class="card my-3">
+    <div class="card-header">Personal Info</div>
+    <div class="card-body">
+        <p><strong>Name:</strong> @Model.PersonalInfo.FirstName @Model.PersonalInfo.LastName</p>
+        <p><strong>DOB:</strong> @Model.PersonalInfo.DateOfBirth.ToShortDateString()</p>
+    </div>
+</div>
+
+<div class="card my-3">
+    <div class="card-header">Contact Info</div>
+    <div class="card-body">
+        <p><strong>Email:</strong> @Model.ContactInfo.Email</p>
+        <p><strong>Phone:</strong> @Model.ContactInfo.Phone</p>
+        <p><strong>Address:</strong> @Model.ContactInfo.Address</p>
+    </div>
+</div>
+
+<div class="card my-3">
+    <div class="card-header">Professional Info</div>
+    <div class="card-body">
+        <p><strong>Occupation:</strong> @Model.ProfessionalInfo.Occupation</p>
+        <p><strong>Company:</strong> @Model.ProfessionalInfo.Company</p>
+        <p><strong>Experience:</strong> @Model.ProfessionalInfo.YearsOfExperience years</p>
+    </div>
+</div>
+
+<div class="my-4">
+    <h4>JSON Output</h4>
+    <pre class="bg-light p-3 rounded">@jsonString</pre>
+    <button id="downloadJson" class="btn btn-success mt-2">Download JSON</button>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('downloadJson').addEventListener('click', function () {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(`@Html.Raw(jsonString.Replace("`", "\\`"))`);
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", "form_data.json");
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        });
+    </script>
+}
